@@ -14,3 +14,6 @@
 - Numerical examples: [comm-accuracy](https://github.com/user-attachments/files/18188098/comm_accuracy_state_of_the_art_letter.pdf),
 [iter-accuracy](https://github.com/user-attachments/files/18188097/iter_accuracy_state_of_the_art_letter.pdf)
 ## Codes
+- In the file AgeSel_EMNIST_MC.py, we solve the image classification task of the EMNIST dataset with a two-layer fully connected NN. We compare the proposed AgeSel algorithm with state-of-the-art algorithms such as FedAvg, Optimal Client Sampling (OCS) and Round Robin (RR) in terms of training rounds and communication cost. We perform 10 Monte Carlo runs to increase the stability of the results.
+- In the file AgeSel_CIFAR_MC.py, we do the same thing as above, but using the CIFAR-10 dataset and a CNN with 2 conv layers and 3 fc layers. Both results demonstrate the superiority of our algorithm.
+- In the file AgeSel_S.py, we explore the impact of the hyper-parameter $S$ in the algorithm, which is the number of workers participating in each round.
