@@ -22,4 +22,4 @@
 - In the file AgeSel_CIFAR_MC.py, we do the same thing as above, but using the CIFAR-10 dataset and a CNN with 2 conv layers and 3 fc layers. Both results demonstrate the superiority of our algorithm.
 - In the file AgeSel_S.py, we explore the impact of the hyper-parameter $S$ in the algorithm, which is the number of workers participating in each round.
 
-We direct the reader to our published paper for more information https://link.springer.com/article/10.1007/s11227-023-05190-7 or https://arxiv.org/abs/2210.17073
+We direct the reader to our published paper for more information https://link.springer.com/article/10.1007/s11227-023-05190-7 or https://arxiv.org/abs/2210.17073.
