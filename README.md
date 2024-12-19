@@ -1,4 +1,4 @@
-# AgeSel---Communication-efficient-local-SGD-with-age-based-worker-selection
+# AgeSel---Communication-Efficient-Local-SGD-with-Age-Based-Worker-Selection
 
 ## Overview
 - This is my first journal paper titled _Communication-efficient local SGD with age-based worker selection_.
