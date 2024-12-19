@@ -7,10 +7,22 @@
   * We consider a distributed setting with **partial participation** of workers and **heterogeneous local datasets** across workers (heteregeneous in the sense that datasets of different workers are generated from different distributions and vary in size.)
   * An simple, yet effective age-based method called **_AgeSel_** is proposed, which uses the ''_ages_'' of workers to balance their participation frequencies.
   * Rigorous **convergence results** of Agesel are established and numerical results are provided to validate the superiority of our algorithm.
+## Key Ideas of AgeSel
+- **Key parameters**
+  - We consider a total of $M$ workers, the server maintaining $m$ maintaining an age parameter $\tau_m$ for each worker that measures the number of consecutive rounds worker $m$ has not talked to the server.
+  - We pre-define a threshold $\tau_{max}$ to identify the workers with low participation frequency.
+  - In each round, the server selects $S$ workers to perform local computations.
+- **Worker selection**
+  - The server first selects all the workers with $\tau_m\geq \tau_{max}$ (with an _age-descending order_), to incorporate all the workers with low-frequency communication.
+    - If the total number of workers selected is smaller than $S$, then the server selects the rest of the workers with the probabilities proportional to the sizes of their datasets.
+    - Else, the selection process is complete.
+- **Age update**
+  - The server broadcasts the global parameter to the workers for local computations.
+  - The server updates the age parameters.
 ## Results
-### Convergence analysis
+### Convergence Analysis
 - Assuming smoothness and lower boundedness of the objective function, and assuming unbiasedness and bounded variance, we manage to provide an upper-bound of order ${O}(\frac{1}{\eta UJ}+\frac{\eta}{SU}+\frac{1}{\eta U})$ for the average of expected sum of squared norm of gradients with nonconvex objectives, where $J$ is the total number of communication rounds, $U$ is the number of local steps taken by each worker in each round, $\eta$ is the loca stepsize, and $S$ the number of participating workers in each round.
-### Simulation results
+### Simulation Results
 - Numerical examples:
   
 
